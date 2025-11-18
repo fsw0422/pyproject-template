@@ -1,0 +1,6 @@
+{
+  "remote.autoForwardPortsFallback": 0,
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+}

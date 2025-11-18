@@ -1,0 +1,37 @@
+{
+  "name": "pyproject-template Dev Container",
+  "build": {
+    "context": "..",
+    "dockerfile": "../Dockerfile-builder"
+  },
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/ubuntu/.ssh,type=bind,readonly",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.zshrc,target=/home/ubuntu/.zshrc,type=bind,readonly",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.p10k.zsh,target=/home/ubuntu/.p10k.zsh,type=bind,readonly",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/ubuntu/.gitconfig,type=bind,readonly"
+  ],
+  "shutdownAction": "stopContainer",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
+    }
+  },
+  "remoteUser": "ubuntu",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/pyproject-template,type=bind",
+  "workspaceFolder": "/home/ubuntu/pyproject-template",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "charliermarsh.ruff",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.vscode-python-envs",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "postCreateCommand": "sh .devcontainer/post-create.sh",
+  "postStartCommand": "uv sync"
+}
