@@ -2,7 +2,7 @@
   "name": "pyproject-template Dev Container",
   "build": {
     "context": "..",
-    "dockerfile": "../Dockerfile-builder"
+    "dockerfile": "../Dockerfile"
   },
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/ubuntu/.ssh,type=bind,readonly",
