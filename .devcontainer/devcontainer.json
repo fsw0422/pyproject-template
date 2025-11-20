@@ -11,8 +11,7 @@
 
     // Following dot files should be moved to custom configuration settings
     // Waiting for devcontainer extension for customization feature https://github.com/devcontainers/spec/issues/22#event-20876902965
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.p10k.zsh,target=/home/ubuntu/.p10k.zsh,type=bind,readonly",
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh.conf,target=/home/ubuntu/.ssh.conf,type=bind,readonly"
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.p10k.zsh,target=/home/ubuntu/.p10k.zsh,type=bind,readonly"
   ],
   "shutdownAction": "stopContainer",
   "features": {
