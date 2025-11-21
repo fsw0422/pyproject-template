@@ -40,5 +40,5 @@
   // Waiting for devcontainer extension for customization feature https://github.com/devcontainers/spec/issues/22#event-20876902965
   "postCreateCommand": "sh .devcontainer/post-create.sh",
 
-  "postStartCommand": "uv sync"
+  "postStartCommand": "pip install -e ."
 }

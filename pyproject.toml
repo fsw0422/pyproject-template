@@ -1,18 +1,24 @@
 [project]
 name = "pyproject-template"
 version = "0.1.0"
+requires-python = ">=3.13"
 dependencies = [
     "devtools==0.12.2",
     "pydantic==2.12.4",
     "pydantic-settings==2.12.0",
     "python-dotenv==1.1.0",
-    "pytest==8.4.2",
-    "pytest-env==1.2.0",
-    "pytest-mock==3.14.1"
 ]
 
-[tool.uv]
-dev-dependencies = []
+[project.optional-dependencies]
+test = [
+    "pytest==8.4.2",
+    "pytest-env==1.2.0",
+    "pytest-mock==3.14.1",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
