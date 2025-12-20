@@ -1,5 +1,5 @@
 {
-  "name": "pyproject-template Dev Container",
+  "name": "pyproject-template",
   "build": {
     "context": "..",
     "dockerfile": "../Dockerfile"
