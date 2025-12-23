@@ -1,3 +1,4 @@
 __pycache__/
 .venv/
 src/pyproject_template.egg-info/
+.devcontainer/setup-custom-dev-env.sh
