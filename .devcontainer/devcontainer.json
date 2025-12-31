@@ -30,5 +30,5 @@
     }
   },
   // Waiting for devcontainer extension for customization feature https://github.com/devcontainers/spec/issues/22#event-20876902965
-  "postCreateCommand": "if [ -f .devcontainer/setup-custom-dev-env.sh ]; then sh .devcontainer/setup-custom-dev-env.sh; fi; npm install --ignore-scripts"
+  "postCreateCommand": "if [ -f .devcontainer/setup-custom-dev-env.sh ]; then sh .devcontainer/setup-custom-dev-env.sh; fi; pip install -e ."
 }
