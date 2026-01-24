@@ -3,3 +3,4 @@ __pycache__/
 src/pyproject_template.egg-info/
 .devcontainer/setup-custom-dev-env.sh
 .vscode/mcp.json
+.vscode/settings.json
