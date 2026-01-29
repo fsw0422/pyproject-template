@@ -4,8 +4,8 @@
     "context": "..",
     "dockerfile": "../Dockerfile"
   },
-  "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/ubuntu/.gitconfig,type=bind,readonly"
+	"runArgs": [
+		"--name", "pyproject-template-devcontainer"
   ],
   "shutdownAction": "stopContainer",
   "features": {
