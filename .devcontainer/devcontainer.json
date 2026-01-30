@@ -17,16 +17,6 @@
   "remoteUser": "ubuntu",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/pyproject-template,type=bind",
   "workspaceFolder": "/home/ubuntu/pyproject-template",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "charliermarsh.ruff",
-        "ms-python.debugpy",
-        "ms-python.python",
-        "tamasfe.even-better-toml"
-      ]
-    }
-  },
   // Waiting for devcontainer extension for customization feature https://github.com/devcontainers/spec/issues/22#event-20876902965
   "postCreateCommand": "if [ -f .devcontainer/setup-custom-dev-env.sh ]; then sh .devcontainer/setup-custom-dev-env.sh; fi; pip install -e ."
 }
